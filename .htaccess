@@ -1,0 +1,50 @@
+Options -Indexes
+
+RewriteEngine On
+
+# 1. Habilitar redirección de index.html a / (raíz)
+RewriteCond %{THE_REQUEST} /index\.html [NC]
+RewriteRule ^(.*)index\.html$ /$1 [L,R=301]
+
+# 2. Habilitar redirección de file.html a /file
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /(.+)\.html\ HTTP/ [NC]
+RewriteRule ^(.+)\.html$ /$1 [L,R=301]
+
+# 3. Mapeo interno: /file carga file.html silenciosamente
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+# 4. Soporte para Video (MIME types)
+AddType video/mp4 .mp4
+AddType video/webm .webm
+AddType video/ogg .ogv
+
+# Hotlink Protection — Proteger imágenes y video de uso externo
+# Excluir logos (necesitan cargar sin referer en primera visita)
+RewriteCond %{REQUEST_URI} !imagenes/logo/ [NC]
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteCond %{REQUEST_URI} \.(jpe?g|png|gif|webp|mp4)$ [NC]
+# Permitir referer vacío (acceso directo / primera carga / compartir enlace)
+RewriteCond %{HTTP_REFERER} !^$ [NC]
+# Permitir mismo host (con o sin puerto)
+RewriteCond %{HTTP_REFERER} !^https?://%{HTTP_HOST} [NC]
+# Permitir dominio de producción lovestoblog.com (con o sin www)
+RewriteCond %{HTTP_REFERER} !^https?://(www\.)?lovestoblog\.com [NC]
+RewriteCond %{HTTP_REFERER} !^https?://[^/]*\.lovestoblog\.com [NC]
+# Permitir localhost y 127.0.0.1 en local (con o sin puerto)
+RewriteCond %{HTTP_REFERER} !^https?://localhost(:[0-9]+)?/ [NC]
+RewriteCond %{HTTP_REFERER} !^https?://127\.0\.0\.1(:[0-9]+)?/ [NC]
+# Permitir referencias file:/// (cuando se abre el HTML localmente)
+RewriteCond %{HTTP_REFERER} !^file:/// [NC]
+RewriteRule . - [F,L]
+
+<IfModule mod_headers.c>
+Header set X-Frame-Options "DENY"
+Header set X-Content-Type-Options "nosniff"
+Header set Referrer-Policy "strict-origin-when-cross-origin"
+Header set Strict-Transport-Security "max-age=31536000; includeSubDomains" env=HTTPS
+Header set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=(), usb=(), gyroscope=(), magnetometer=(), fullscreen=(self)"
+Header set Content-Security-Policy "default-src 'self'; img-src 'self' data: blob: https:; media-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self' https://formsubmit.co; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://formsubmit.co"
+Header unset X-Powered-By
+</IfModule>

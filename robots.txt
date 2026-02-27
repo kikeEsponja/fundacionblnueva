@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: /recursos/data/sitemap.php

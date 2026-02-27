@@ -1,0 +1,16 @@
+
+    Directory: C:\xampp\htdocs\sistema-fundacion\recursos\videos\galeria
+
+Mode      LastWriteTime
+----      -------------
+-a---   19/02/2026
+                   0:00
+-a---   19/02/2026
+                   0:00
+-a---   19/02/2026
+                   0:00
+-a---   19/02/2026
+                   0:00
+-a---   19/02/2026
+                   0:00
+
