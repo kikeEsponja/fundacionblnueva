@@ -561,20 +561,6 @@ header.menu-abierto {
 button {
   cursor: pointer;
 }
-/*#english, #spanish{
-  display: flex;
-  align-items: center;
-  height: 40px;
-  width: 70px;
-}
-#english > img{
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-}
-#spanish > img{
-  width: 100%;
-}*/
 #english{
   width: 40px;
   height: 40px;
@@ -603,7 +589,16 @@ button {
   z-index: 3100;
   /* Arriba del fondo del menú */
 }
-
+.inst-local{
+  width: 100%;
+}
+.inst-local > img{
+  width: 100%;
+}
+.icono{
+  width: 200px;
+  height: fit-content;
+}
 /* GALERÍA */
 .galeria {
   display: flex;
