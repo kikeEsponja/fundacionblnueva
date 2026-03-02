@@ -1,3 +1,17 @@
+document.addEventListener("DOMContentLoaded", function() {
+  // 1. Inicializamos el modal de Bootstrap
+  var elementoModal = document.getElementById('exampleModal');
+  var modalInstancia = new bootstrap.Modal(elementoModal);
+
+  // 2. Lo mostramos apenas carga la página
+  modalInstancia.show();
+
+  // 3. Configuramos el cierre automático (2000ms = 2 segundos)
+  setTimeout(function() {
+    modalInstancia.hide();
+  }, 2000);
+});
+
 function setupNavbarLinks() {
     const currentPath = window.location.pathname;
     const isHomePage = currentPath === '/' || currentPath.endsWith('/') || currentPath.endsWith('index.html');

@@ -188,6 +188,29 @@ body.admin {
   outline: 3px solid var(--boton-cta);
   outline-offset: 3px;
 }
+/* MODAL */
+.modal-contenido {
+    position: relative;
+    display: flex;
+    width: 80%;
+    color: var(--bs-modal-color);
+    pointer-events: auto;
+    background-color: #ffffff;
+    background-clip: padding-box;
+    border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
+    border-radius: 50%;
+    outline: 0;
+    flex-direction: column;
+}
+.modal-dialog{
+    position: absolute;
+    top: 10%;
+    right: 0%;
+    left: 0%;
+}
+.logo_modal{
+  width: 100%;
+}
 
 /* Hero Section */
 .hero {
