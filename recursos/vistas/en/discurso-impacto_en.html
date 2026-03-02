@@ -1,27 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:site_name" content="Fundación Betty Linares">
-    <meta property="og:title" content="Galería - Fundación Betty Linares">
-    <meta property="og:description" content="Conoce nuestras actividades y acciones solidarias.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="">
-    <meta property="og:image" content="../../imagenes/logo/logo_preview.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Galería - Fundación Betty Linares">
-    <meta name="twitter:description" content="Imágenes y videos de nuestras acciones.">
-    <meta name="description" content="Galería de actividades y acciones solidarias de la Fundación Betty Linares en apoyo a los adultos mayores.">
-    <link rel="icon" href="../../imagenes/logo/ico_logo.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../../vendor/font-awesome/css/all.min.css">
-    <link rel="stylesheet" href="../../estilos/estilos.css">
-    <title>Betty Linares Foundation — Gallery</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Blog de la Fundación Betty Linares: novedades, historias y acciones solidarias.">
+  <meta property="og:site_name" content="Fundación Betty Linares">
+  <meta property="og:title" content="Blog - Fundación Betty Linares">
+  <meta property="og:description" content="Historias y noticias de nuestro trabajo con personas mayores.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="../../imagenes/logo/logo_preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Blog - Fundación Betty Linares">
+  <meta name="twitter:description" content="Novedades y acciones solidarias.">
+  <link rel="icon" href="../../imagenes/logo/ico_logo.ico" type="image/x-icon">
+  <link rel="icon" href="../../imagenes/logo/logo_preview.png" type="image/png">
+  <link rel="stylesheet" href="../../vendor/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="../../estilos/estilos.css">
+  <title>Betty Linares Foundation — Impact speech</title>
 </head>
 
 <body>
-
     <header>
         <nav class="navbar">
             <img class="logo" src="./recursos/imagenes/logo/logo_preview.png" alt="Logo Fundación Betty Linares" onerror="this.onerror=null;this.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=';">
@@ -39,7 +39,7 @@
                     <div class="dropdown-menu">
                         <button id="nosotros" data-url="./nosotros_en" class="btn btn-secondary">Our Model</button>
                         <button id="servicios" data-url="./servicios_en" class="btn btn-secondary">Impact</button>
-                        <!--<button id="galeria" data-url="./galeria_en" class="btn btn-secondary">Gallery</button>-->
+                        <button id="galeria" data-url="./galeria_en" class="btn btn-secondary">Gallery</button>
                     </div>
                 </div>
 
@@ -47,7 +47,7 @@
                     <button class="btn btn-secondary dropdown-toggle">Alliances</button>
                     <div class="dropdown-menu">
                         <button id="local-gov" data-url="./gobiernos-locales_en" class="btn btn-primary">Local Government Collaboration</button>
-                        <button id="discurso-impacto" data-url="./discurso-impacto_en" class="btn btn-primary">Discurso de inversión de impacto</button>
+                        <!--<button id="discurso-impacto" data-url="./discurso-impacto_en" class="btn btn-primary">Discurso de inversión de impacto</button>-->
                         <button id="ayudar" data-url="./ayudar_en" class="btn btn-secondary">Volunteer</button>
                         <button id="donaciones" data-url="./donaciones_en" class="btn btn-secondary">Donations</button>
                     </div>
@@ -60,44 +60,18 @@
         </nav>
     </header>
 
-    <main>
-        <section class="galeria">
-            <h2>Our Work with Heart in the Community</h2>
-            <h1 class="site-h1">Betty Linares Foundation for the Elderly and Vulnerable Population</h1>
-
-            <p class="galeria-descripcion">
-                "We accompany, care for and celebrate the lives of those who need it most: elderly and children. Every
-                gesture, activity and project is born from the commitment to provide them with dignity, joy and hope."
-            </p>
-
-            <div class="galeria-tabs">
-                <button type="button" class="btn btn-secondary galeria-tab galeria-tab-activa" data-target="fotos">
-                    Photos
-                </button>
-                <button type="button" class="btn btn-secondary galeria-tab" data-target="videos">
-                    Videos
-                </button>
+    <section class="servicios-seccion">
+        <div class="container">
+            <!-- Proyecto 7 -->
+            <div class="proyecto-card">
+                <div class="proyecto-header">
+                    <span class="proyecto-numero">-</span>
+                    <h3>IMPACT PITCH</h3>
+                </div>
+                <p>An historical investment about $500,000 USD to secure 500 m^2 of industrial-grade infrastructure. This complex will unify our Social Bakery, Hydroponics Laboratory and Training Center, creating a permanent sanctuary for the empowerment of senior citizens in Peru.</p>
             </div>
-
-            <section class="galeria-seccion" id="galeria-fotos">
-                <h3>Photos</h3>
-                <div id="fotos-grid" class="galeria-grid"></div>
-            </section>
-
-            <section class="galeria-seccion galeria-seccion-oculta" id="galeria-videos">
-                <h3>Videos</h3>
-                <div id="videos-grid" class="galeria-grid"></div>
-            </section>
-        </section>
-    </main>
-
-    <div id="lightbox" class="lightbox" aria-hidden="true">
-        <div class="lightbox-backdrop"></div>
-        <div class="lightbox-container">
-            <button id="lightbox-close" class="lightbox-close" aria-label="Cerrar">×</button>
-            <div id="lightbox-body" class="lightbox-body"></div>
         </div>
-    </div>
+    </section>
 
     <footer class="footer">
         <div class="container footer-content">
@@ -124,17 +98,17 @@
             </div>
             <div class="footer-contact">
                 <h4>Contact Legal</h4>
-                <p><strong>Admin:</strong> Calle Santa Catalina 505, Arequipa - Perú</p>
+                <p><strong>Admón:</strong> Calle Santa Catalina 505, Arequipa - Perú</p>
                 <p><strong>Email:</strong> <a href="mailto:bettylinaresfundacion@gmail.com">bettylinaresfundacion@gmail.com</a></p>
                 <p><strong>Cel:</strong> <a href="tel:955733000">955 733 000</a> – <a href="tel:926328333">926 328 333</a></p>
-                <h4 class="footer-donate-title">Tu apoyo cambia vidas</h4>
+                <h4 class="footer-donate-title">Your support changes lives</h4>
                 <div class="footer-divider"><span class="line"></span><a class="heart-icon" href="./donaciones_en" aria-label="Apoya con una donación" data-tip="Apoya con una donación">❤</a><span class="line"></span></div>
                 <div class="social-links">
                     <a href="https://www.facebook.com/share/17tQK161Tk/" aria-label="Facebook Fundación Betty Linares" class="social-icon facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://www.instagram.com/blinaresfundacion?igsh=cXVoaGQyNDk1eXg5" aria-label="Instagram Fundación Betty Linares" class="social-icon instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
                     <a href="https://x.com/BettyFundacion" aria-label="X Fundación Betty Linares" class="social-icon x">X</a>
-                    <a href="https://www.tiktok.com/@betty.linares.fun?_r=1&_t=ZS-947WGv3jSf2" aria-label="TikTok Fundación Betty Linares" class="social-icon tiktok" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
-                    <a href="https://www.threads.com/@blinaresfundacion" aria-label="Threads Fundación Betty Linares" class="social-icon threads" target="_blank" rel="noopener noreferrer"><i class="fas fa-at"></i></a>
+                    <a href="https://www.tiktok.com/@betty.linares.fun?_r=1&_t=ZS-947WGv3jSf2" aria-label="TikTok Fundación Betty Linares" class="social-icon tiktok"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.threads.com/@blinaresfundacion" aria-label="Threads Fundación Betty Linares" class="social-icon threads"><i class="fas fa-at"></i></a>
                 </div>
             </div>
         </div>
@@ -151,7 +125,6 @@
     </a>
 
     <script src="../../funcionalidades/app.js?v=20260223"></script>
-
 </body>
 
 </html>

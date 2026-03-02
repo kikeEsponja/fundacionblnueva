@@ -4,20 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Cómo ayudar en Fundación Betty Linares: voluntariado y donaciones para mejorar la vida de personas mayores.">
+    <meta name="description" content="Dona a la Fundación Betty Linares y apoya a personas mayores en situación vulnerable.">
     <meta property="og:site_name" content="Fundación Betty Linares">
-    <meta property="og:title" content="Cómo Ayudar - Fundación Betty Linares">
-    <meta property="og:description" content="Súmate con tu tiempo o donación y apoya a personas mayores en situación vulnerable.">
+    <meta property="og:title" content="Donaciones - Fundación Betty Linares">
+    <meta property="og:description" content="Aporta hoy y genera impacto directo en la calidad de vida.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="">
     <meta property="og:image" content="../imagenes/logo/logo_preview.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Cómo Ayudar - Fundación Betty Linares">
-    <meta name="twitter:description" content="Colabora como voluntario/a o realiza una donación.">
+    <meta name="twitter:title" content="Donaciones - Fundación Betty Linares">
+    <meta name="twitter:description" content="Dona y transforma vidas.">
     <link rel="icon" href="../imagenes/logo/ico_logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="../vendor/font-awesome/css/all.min.css">
     <link rel="stylesheet" href="../estilos/estilos.css">
-    <title>Fundación Betty Linares — Cómo Ayudar</title>
+    <title>Fundación Betty Linares — Noticias</title>
 </head>
 
 <body>
@@ -47,9 +47,8 @@
                     <div class="dropdown-menu">
                         <button id="local-gov" data-url="./gobiernos-locales" class="btn btn-primary">Colaboración con gobiernos locales</button>
                         <button id="discurso-impacto" data-url="./discurso-impacto" class="btn btn-primary">Discurso de inversión de impacto</button>
-                        <!--<button id="ayudar" data-url="./ayudar" class="btn btn-secondary">Voluntariado</button>-->
+                        <button id="ayudar" data-url="./ayudar" class="btn btn-secondary">Voluntariado</button>
                         <button id="donaciones" data-url="./donaciones" class="btn btn-secondary">Donaciones</button>
-                        <button id="noticias" data-url="./noticias" class="btn btn-secondary">Noticias</button>
                     </div>
                 </div>
 
@@ -59,57 +58,21 @@
         </nav>
     </header>
 
-    <section class="ayudar-seccion">
-        <div class="container">
-            <h2 class="titulo-seccion">Cómo Puedes Ayudar</h2>
+    <section class="galeria">
+        <div>
             <h1 class="site-h1">Fundación Betty Linares para el Adulto Mayor y la Población Vulnerable</h1>
-            <p class="introduccion">Involucrar al mayor número de personas en la lucha contra la exclusión es fundamental para nosotros. Tu apoyo puede transformar vidas.</p>
+            <h3>Espacio para las noticias y actualizaciones de la Fundación</h3>
+        </div>
+
+        <div class="container">
+            <h1 class="titulo-seccion" id="titulo_noticia"></h1>
+            <h3 class="site-h1" id="subtitulo_noticia"></h3>
 
             <div class="planteamiento-bloque">
-                <h3>Filantropía y Colaboración</h3>
-                <p>Nuestra gestión se basa en la <strong>Filantropía Pura</strong>, donde individuos u organismos donan capital, tiempo o bienes sin esperar nada a cambio. Buscamos establecer alianzas estratégicas para asegurar la sostenibilidad del cambio social.</p>
-            </div>
-
-            <div class="formas-de-ayudar-grid">
-                <div class="ayuda-card">
-                    <div class="ayuda-icon">🤝</div>
-                    <h3>Alianzas Estratégicas</h3>
-                    <p>Buscamos colaboraciones con empresas privadas e instituciones públicas para asegurar la sostenibilidad del cambio social.</p>
-                </div>
-                <div class="ayuda-card">
-                    <div class="ayuda-icon">🙋‍♂️</div>
-                    <h3>Voluntariado</h3>
-                    <p>Facilitamos el desarrollo de la acción voluntaria. Tu tiempo y talento son herramientas valiosas para nuestra comunidad.</p>
-                </div>
-                <div class="ayuda-card">
-                    <div class="ayuda-icon">📢</div>
-                    <h3>Sensibilización</h3>
-                    <p>Ayúdanos a concientizar a la población sobre la situación de los más desfavorecidos y los desafíos que enfrentamos.</p>
-                </div>
-            </div>
-
-            <div class="objetivos-bloque">
-                <h3>Objetivos y Metas Institucionales</h3>
-                <p>Nuestros retos y desafíos se centran en la profesionalización y transparencia de la labor social:</p>
-                <ul class="lista-detallada">
-                    <li>Lograr la <strong>Auto Sostenibilidad</strong> institucional en el corto y mediano plazo.</li>
-                    <li><strong>Transparencia:</strong> Difundir acciones mediante medios digitales y auditorías de rendición de cuentas.</li>
-                    <li>Generar una <strong>Cultura Social</strong> participativa, solidaria y transparente.</li>
-                    <li>Atender eficazmente a la <strong>población vulnerable</strong> desamparada de la región.</li>
-                    <li>Profesionalizar la acción social con personal altamente calificado y comprometido.</li>
-                    <li>Establecer una <strong>Estructura Organizativa</strong> dinámica para la consecución de fines altruistas.</li>
-                </ul>
-            </div>
-
-            <div class="contacto-directo">
-                <h3>¿Quieres ser parte del cambio?</h3>
-                <p>Contáctanos para explorar cómo puedes colaborar con Betty Linares Fundación.</p>
-                <div class="cta-group-inline">
-                    <button id="contacto-btn" data-url="./contacto" class="btn btn-primary">Contáctanos</button>
-                    <button id="voluntario-btn" data-url="./donaciones" class="btn btn-primary">Ser Voluntario</button>
-                </div>
+                <p id="contenido_noticia"></p>
             </div>
         </div>
+
     </section>
 
     <footer class="footer">

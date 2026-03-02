@@ -22,40 +22,43 @@
 </head>
 
 <body>
-  <header>
-    <nav class="navbar">
-      <img class="logo" src="../imagenes/logo/logo_preview.png" alt="Logo Fundación Betty Linares"
-        onerror="this.onerror=null;this.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=';">
-      <button class="navbar-toggle" aria-label="Abrir menú" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <div class="navbar-links">
-        <button id="inicio" data-url="../../" class="btn btn-primary">Inicio</button>
+    <header>
+        <nav class="navbar">
+            <img class="logo" src="./recursos/imagenes/logo/logo_preview.png" alt="Logo Fundación Betty Linares" onerror="this.onerror=null;this.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=';">
+            <button class="navbar-toggle" aria-label="Abrir menú" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="navbar-links">
+                <!--<button id="english" data-url="./recursos/vistas/en/index_en.html" class=""><img src="./recursos/imagenes/flag-usa.svg" alt=""></button>-->
+                <button id="inicio" data-url="../../index.html" class="btn btn-primary">Inicio</button>
 
-        <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle">Institucional</button>
-          <div class="dropdown-menu">
-            <button id="nosotros" data-url="./nosotros" class="btn btn-secondary">Nosotros</button>
-            <button id="servicios" data-url="./servicios" class="btn btn-secondary">Servicios</button>
-            <button id="galeria" data-url="./galeria" class="btn btn-secondary">Galería</button>
-          </div>
-        </div>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle">Institucional</button>
+                    <div class="dropdown-menu">
+                        <button id="nosotros" data-url="./nosotros" class="btn btn-secondary">Nuestro Modelo</button>
+                        <button id="servicios" data-url="./servicios" class="btn btn-secondary">Impacto</button>
+                        <button id="galeria" data-url="./galeria" class="btn btn-secondary">Galería</button>
+                    </div>
+                </div>
 
-        <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle">Apoyo</button>
-          <div class="dropdown-menu">
-            <button id="ayudar" data-url="./ayudar" class="btn btn-secondary">Cómo Ayudar</button>
-            <button id="donaciones" data-url="./donaciones" class="btn btn-secondary">Donaciones</button>
-          </div>
-        </div>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle">Alianzas</button>
+                    <div class="dropdown-menu">
+                        <button id="local-gov" data-url="./gobiernos-locales" class="btn btn-primary">Colaboración con gobiernos locales</button>
+                        <button id="discurso-impacto" data-url="./discurso-impacto" class="btn btn-primary">Discurso de inversión de impacto</button>
+                        <button id="ayudar" data-url="./ayudar" class="btn btn-secondary">Voluntariado</button>
+                        <button id="donaciones" data-url="./donaciones" class="btn btn-secondary">Donaciones</button>
+                    </div>
+                </div>
 
-        <button id="contacto" data-url="./contacto" class="btn btn-secondary">Contacto</button>
-        <button id="blog" data-url="./blog" class="btn btn-secondary">Blog</button>
-      </div>
-    </nav>
-  </header>
+                <button id="contacto" data-url="./contacto" class="btn btn-secondary">Contacto</button>
+                <!--<button id="blog" data-url="./blog" class="btn btn-secondary">Banco de datos</button>-->
+                <button id="noticias" data-url="./noticias" class="btn btn-secondary">Noticias</button>
+            </div>
+        </nav>
+    </header>
 
   <main>
     <section class="galeria">
@@ -77,11 +80,8 @@
   <footer class="footer">
     <div class="container footer-content">
       <div class="footer-brand">
-        <img src="../imagenes/logo/logo_preview.png" alt="Logo Fundación Betty Linares" class="footer-logo"
-          loading="lazy" decoding="async"
-          onerror="this.onerror=null;this.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=';">
-        <p class="footer-description">Buscamos procurar y otorgar calidad de vida a poblaciones vulnerables,
-          especialmente de la tercera edad en estado de abandono.</p>
+        <img src="../imagenes/logo/logo_preview.png" alt="Logo Fundación Betty Linares" class="footer-logo" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=';">
+        <p class="footer-description">Buscamos procurar y otorgar calidad de vida a poblaciones vulnerables, especialmente de la tercera edad en estado de abandono.</p>
         <div class="footer-legal">
           <p>R.A.N.F. (MINJUS) Nro. 274</p>
           <p>RUC: 20539399706</p>
@@ -107,20 +107,13 @@
         </p>
         <p><strong>Cel:</strong> <a href="tel:955733000">955 733 000</a> – <a href="tel:926328333">926 328 333</a></p>
         <h4 class="footer-donate-title">Tu apoyo cambia vidas</h4>
-        <div class="footer-divider"><span class="line"></span><a class="heart-icon" href="./donaciones"
-            aria-label="Apoya con una donación" data-tip="Apoya con una donación">❤</a><span class="line"></span></div>
+        <div class="footer-divider"><span class="line"></span><a class="heart-icon" href="./donaciones" aria-label="Apoya con una donación" data-tip="Apoya con una donación">❤</a><span class="line"></span></div>
         <div class="social-links">
-          <a href="https://www.facebook.com/share/17tQK161Tk/" aria-label="Facebook Fundación Betty Linares"
-            class="social-icon facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com/blinaresfundacion?igsh=cXVoaGQyNDk1eXg5"
-            aria-label="Instagram Fundación Betty Linares" class="social-icon instagram" target="_blank"
-            rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/share/17tQK161Tk/" aria-label="Facebook Fundación Betty Linares" class="social-icon facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/blinaresfundacion?igsh=cXVoaGQyNDk1eXg5" aria-label="Instagram Fundación Betty Linares" class="social-icon instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
           <a href="https://x.com/BettyFundacion" aria-label="X Fundación Betty Linares" class="social-icon x">X</a>
-          <a href="https://www.tiktok.com/@betty.linares.fun?_r=1&_t=ZS-947WGv3jSf2"
-            aria-label="TikTok Fundación Betty Linares" class="social-icon tiktok" target="_blank"
-            rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
-          <a href="https://www.threads.com/@blinaresfundacion" aria-label="Threads Fundación Betty Linares"
-            class="social-icon threads" target="_blank" rel="noopener noreferrer"><i class="fas fa-at"></i></a>
+          <a href="https://www.tiktok.com/@betty.linares.fun?_r=1&_t=ZS-947WGv3jSf2" aria-label="TikTok Fundación Betty Linares" class="social-icon tiktok" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
+          <a href="https://www.threads.com/@blinaresfundacion" aria-label="Threads Fundación Betty Linares" class="social-icon threads" target="_blank" rel="noopener noreferrer"><i class="fas fa-at"></i></a>
         </div>
       </div>
     </div>
@@ -128,9 +121,11 @@
       <p>&copy; 2024–2026 Betty Linares Fundación. Todos los derechos reservados.</p>
     </div>
   </footer>
-  <a href="https://wa.me/51955733000" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
-    aria-label="WhatsApp Fundación Betty Linares">
+  <a href="https://wa.me/51955733000" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Fundación Betty Linares">
     <i class="fab fa-whatsapp"></i>
+  </a>
+  <a href="https://www.facebook.com/share/17tQK161Tk/" class="facebook-float" target="_blank" rel="noopener noreferrer" aria-label="Facebook Fundación Betty Linares">
+      <i class="fab fa-facebook-f"></i>
   </a>
   <script src="../funcionalidades/app.js?v=20260223"></script>
 </body>

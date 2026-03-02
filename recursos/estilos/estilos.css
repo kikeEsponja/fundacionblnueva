@@ -2621,6 +2621,32 @@ a:focus-visible {
   color: white;
   filter: brightness(1.1);
 }
+.facebook-float {
+  position: fixed;
+  bottom: 2rem;
+  right: 6rem;
+  width: 56px;
+  height: 56px;
+  background-color: #3b5998;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  z-index: 10002;
+  /* Por encima de Lightbox (10000) y Status Messages (10001) */
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  text-decoration: none;
+}
+
+.facebook-float:hover {
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: 0 8px 25px rgba(37, 92, 211, 0.4);
+  color: white;
+  filter: brightness(1.1);
+}
 
 @media (max-width: 768px) {
   .whatsapp-float {

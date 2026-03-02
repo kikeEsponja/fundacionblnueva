@@ -23,37 +23,42 @@
 <body>
     <header>
         <nav class="navbar">
-            <img class="logo" src="../imagenes/logo/logo_preview.png" alt="Logo Fundación Betty Linares" onerror="this.onerror=null;this.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=';">
+            <img class="logo" src="./recursos/imagenes/logo/logo_preview.png" alt="Logo Fundación Betty Linares" onerror="this.onerror=null;this.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=';">
             <button class="navbar-toggle" aria-label="Abrir menú" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
             <div class="navbar-links">
-                <button id="inicio" data-url="../../" class="btn btn-primary">Inicio</button>
+                <!--<button id="english" data-url="./recursos/vistas/en/index_en.html" class=""><img src="./recursos/imagenes/flag-usa.svg" alt=""></button>-->
+                <button id="inicio" data-url="../../index.html" class="btn btn-primary">Inicio</button>
 
                 <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle">Institucional</button>
                     <div class="dropdown-menu">
-                        <button id="nosotros" data-url="./nosotros" class="btn btn-secondary">Nosotros</button>
-                        <button id="servicios" data-url="./servicios" class="btn btn-secondary">Servicios</button>
+                        <button id="nosotros" data-url="./nosotros" class="btn btn-secondary">Nuestro Modelo</button>
+                        <!--<button id="servicios" data-url="./servicios" class="btn btn-secondary">Impacto</button>-->
                         <button id="galeria" data-url="./galeria" class="btn btn-secondary">Galería</button>
                     </div>
                 </div>
 
                 <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle">Apoyo</button>
+                    <button class="btn btn-secondary dropdown-toggle">Alianzas</button>
                     <div class="dropdown-menu">
-                        <button id="ayudar" data-url="./ayudar" class="btn btn-secondary">Cómo Ayudar</button>
+                        <button id="local-gov" data-url="./gobiernos-locales" class="btn btn-primary">Colaboración con gobiernos locales</button>
+                        <button id="discurso-impacto" data-url="./discurso-impacto" class="btn btn-primary">Discurso de inversión de impacto</button>
+                        <button id="ayudar" data-url="./ayudar" class="btn btn-secondary">Voluntariado</button>
                         <button id="donaciones" data-url="./donaciones" class="btn btn-secondary">Donaciones</button>
                     </div>
                 </div>
 
                 <button id="contacto" data-url="./contacto" class="btn btn-secondary">Contacto</button>
-                <button id="blog" data-url="./blog" class="btn btn-secondary">Blog</button>
+                <button id="blog" data-url="./blog" class="btn btn-secondary">Banco de datos</button>
+                <button id="noticias" data-url="./noticias" class="btn btn-secondary">Noticias</button>
             </div>
         </nav>
     </header>
+
     <section class="servicios-seccion">
         <div class="container">
             <h2 class="titulo-seccion">Nuestros Proyectos</h2>
@@ -305,9 +310,11 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/51955733000" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
-        aria-label="WhatsApp Fundación Betty Linares">
+    <a href="https://wa.me/51955733000" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Fundación Betty Linares">
         <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="https://www.facebook.com/share/17tQK161Tk/" class="facebook-float" target="_blank" rel="noopener noreferrer" aria-label="Facebook Fundación Betty Linares">
+        <i class="fab fa-facebook-f"></i>
     </a>
 
     <script src="../funcionalidades/app.js?v=20260223"></script>
