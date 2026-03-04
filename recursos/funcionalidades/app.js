@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+/*document.addEventListener("DOMContentLoaded", function() {
   // 1. Inicializamos el modal de Bootstrap
   var elementoModal = document.getElementById('exampleModal');
   var modalInstancia = new bootstrap.Modal(elementoModal);
@@ -10,6 +10,42 @@ document.addEventListener("DOMContentLoaded", function() {
   setTimeout(function() {
     modalInstancia.hide();
   }, 2000);
+});*/
+document.addEventListener("DOMContentLoaded", function() {
+  const modal = document.getElementById('exampleModal');
+  
+  // Creamos el fondo oscuro dinámicamente si no lo tienes en el HTML
+  const backdrop = document.createElement('div');
+  backdrop.className = 'modal-backdrop';
+  document.body.appendChild(backdrop);
+
+  // Función para mostrar
+  function abrirModal() {
+    modal.classList.add('show');
+    backdrop.classList.add('show');
+  }
+
+  // Función para cerrar
+  function cerrarModal() {
+    modal.classList.remove('show');
+    backdrop.classList.remove('show');
+    
+    // Esperamos a que termine la animación antes de quitar el display
+    setTimeout(() => {
+      modal.style.display = 'none';
+      backdrop.style.display = 'none';
+    }, 500); 
+  }
+
+  // Ejecución
+  modal.style.display = 'block'; // Lo preparamos para el fade
+  backdrop.style.display = 'block';
+  
+  // Pequeño delay para que el navegador note el cambio de opacidad
+  setTimeout(abrirModal, 50);
+
+  // Cerrar automáticamente después de 2 segundos
+  setTimeout(cerrarModal, 2000); 
 });
 
 function setupNavbarLinks() {

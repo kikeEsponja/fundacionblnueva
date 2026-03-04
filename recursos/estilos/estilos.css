@@ -188,28 +188,67 @@ body.admin {
   outline: 3px solid var(--boton-cta);
   outline-offset: 3px;
 }
-/* MODAL */
-.modal-contenido {
-    position: relative;
-    display: flex;
-    width: 80%;
-    color: var(--bs-modal-color);
-    pointer-events: auto;
-    background-color: #ffffff;
-    background-clip: padding-box;
-    border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
-    border-radius: 50%;
-    outline: 0;
-    flex-direction: column;
+@keyframes girarYCrecer {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg) scale(1);
+    opacity: 1;
+  }
 }
-.modal-dialog{
-    position: absolute;
-    top: 10%;
-    right: 0%;
-    left: 0%;
+
+/* El modal ahora usará esta animación cuando tenga la clase .show */
+.modal.show {
+  display: block;
+  animation: girarYCrecer 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* Estilo base del modal (importante mantener el translate para el centrado) */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1050;
+  display: none;
+  width: 90%;
+  max-width: 400px;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Clase para mostrar el modal */
+/*.modal.show {
+  display: block;
+  opacity: 1;
+}*/
+
+/* El fondo oscuro (Backdrop) */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7); /* El "fade to black" */
+  z-index: 1040;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.modal-backdrop.show {
+  display: block;
+  opacity: 1;
 }
 .logo_modal{
-  width: 100%;
+    border-radius: 50%;
+    background: aliceblue;
+    width: 100%;
 }
 
 /* Hero Section */
@@ -2228,54 +2267,6 @@ body.admin-dark .admin-nav .nav-item.active {
     white-space: normal;
     line-height: 1.2;
   }
-}
-
-/* Modal genérico */
-.modal {
-  position: fixed;
-  inset: 0;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-}
-
-.modal.is-open {
-  display: flex;
-}
-
-.modal-backdrop {
-  position: absolute;
-  inset: 0;
-  background: rgba(26, 32, 44, 0.55);
-}
-
-.modal-content {
-  position: relative;
-  background: #fff;
-  border-radius: 14px;
-  padding: 1rem;
-  width: 92%;
-  max-width: 420px;
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.22);
-  border: 1px solid #e2e8f0;
-}
-
-.modal-header {
-  font-size: 1.15rem;
-  font-weight: 700;
-  margin-bottom: .5rem;
-}
-
-.modal-body {
-  color: #2d3748;
-  margin-bottom: .75rem;
-}
-
-.modal-actions {
-  display: flex;
-  gap: .5rem;
-  justify-content: flex-end;
 }
 
 body.admin-dark .modal-content {
